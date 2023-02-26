@@ -1,0 +1,39 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+	version="2.2">
+	<persistence-unit name="system"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.codamai.cms.models.AbstractModel</class>
+		<class>com.codamai.cms.models.CompanySettings</class>
+		<class>com.codamai.cms.models.SystemDataModel</class>
+		<class>com.codamai.cms.models.SystemProperties</class>
+		<class>com.codamai.cms.models.SystemSettings</class>
+		<class>com.codamai.cms.models.SystemSingletonModel</class>
+		<class>com.codamai.cms.models.TenantDataModel</class>
+		<class>com.codamai.cms.models.TenantSingletonModel</class>
+		<class>com.codamai.cms.models.TestAbstract</class>
+		<class>com.codamai.cms.models.TestAbstractA</class>
+		<class>com.codamai.cms.models.TestAbstractB</class>
+		<class>com.codamai.cms.models.TestCustomerAddress</class>
+		<class>com.codamai.cms.models.TestCustomerCompany</class>
+		<class>com.codamai.cms.models.TestCustomerInvoice</class>
+		<class>com.codamai.cms.models.TestCustomerPerson</class>
+		<class>com.codamai.cms.models.TestDeepA</class>
+		<class>com.codamai.cms.models.TestDeepAbstract</class>
+		<class>com.codamai.cms.models.TestDeepB</class>
+		<class>com.codamai.cms.models.UserDataModel</class>
+		<class>com.codamai.cms.models.UserFavorite</class>
+		<class>com.codamai.cms.models.UserSettings</class>
+		<class>com.codamai.cms.models.UserSingletonModel</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		
+		<properties>
+	      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+	      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
+	      <property name="javax.persistence.jdbc.user" value="sa"/>
+	      <property name="javax.persistence.jdbc.password" value=""/>
+	    </properties>
+	</persistence-unit>
+</persistence>
